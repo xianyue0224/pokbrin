@@ -1,6 +1,6 @@
 {
   "name": "@xyfun/utils",
-  "version": "0.0.0-development",
+  "version": "0.0.0",
   "description": "",
   "exports": {
     ".": {
@@ -20,9 +20,8 @@
     "clean": "npx rimraf -rf ./lib",
     "build:esm": "tsc -p ./configs/tsconfig.esm.json",
     "build:cjs": "tsc -p ./configs/tsconfig.cjs.json",
-    "build": "npm run clean && npm run build:esm && npm run build:cjs",
+    "build": "npm run test && npm run clean && npm run build:esm && npm run build:cjs",
     "test": "mocha",
-    "semantic-release": "semantic-release",
     "prepack": "npm run build"
   },
   "files": [
@@ -38,5 +37,9 @@
     "mocha": "^10.0.0",
     "rimraf": "^3.0.2",
     "ts-node": "^10.9.1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/xianyue0224/utils.git"
   }
 }
