@@ -27,8 +27,8 @@
   "files": [
     "lib/**/*"
   ],
-  "keywords": [],
-  "author": "",
+  "keywords": ["utils","functions","tools"],
+  "author": "xianyue",
   "license": "ISC",
   "devDependencies": {
     "@types/chai": "^4.3.3",
