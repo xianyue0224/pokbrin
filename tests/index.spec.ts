@@ -1,56 +1,38 @@
 import 'mocha'
 import { assert } from 'chai'
 
-import { cutFirst, cutLast, reverseString } from '../src/index'
+import { castArray,capitalize } from '../src/index'
 
-import * as npmPackage from '../src/index'
+import * as pok from '../src/index'
 
-describe('npmPackage', () => {
-  it('应该是一个 Object', () => {
-    assert.isObject(npmPackage)
+describe('pok', () => {
+  it('pok 应该是一个对象', () => {
+    assert.isObject(pok)
   })
 
-  it('应该包含 cutFirst 属性', () => {
-    assert.property(npmPackage, 'cutFirst')
+  it('应该包含 castArray 属性', () => {
+      assert.property(pok, 'castArray')
   })
-  it('应该包含 cutLast 属性', () => {
-    assert.property(npmPackage, 'cutLast')
-  })
-  it('应该包含 reverseString 属性', () => {
-    assert.property(npmPackage, 'reverseString')
+  it('应该包含 capitalize 属性', () => {
+      assert.property(pok, 'capitalize')
   })
 })
 
-describe('cutFirst Function', () => {
-  it('cutFirst 应该是一个函数', () => {
-    assert.isFunction(cutFirst)
-  })
+describe('都是函数', () => {
+    assert.isFunction(castArray)
+    assert.isFunction(capitalize)
+})
 
-  it('cutFirst 函数应该把传入的字符串的第一个字符抹去', () => {
-    assert.equal(cutFirst('abc'), 'bc')
+describe('Array', () => {
+  it('#castArray()', () => {
+    const value = "abc"
+    assert.equal(castArray(value).includes(value),true)
   })
 })
 
-describe('cutLast Function', () => {
-  it('cutLast 应该是一个函数', () => {
-    assert.isFunction(cutLast)
-  })
-
-  it('cutLast 函数应该把传入的字符串的最后一个字符抹去', () => {
-    const expected = 'ab'
-    const actual = cutLast('abc')
-    assert.equal(actual, expected)
-  })
-})
-
-describe('reverseString Function', () => {
-  it('reverseString 应该是一个函数', () => {
-    assert.isFunction(reverseString)
-  })
-
-  it('reverseString 函数应该把传入的字符串翻转再返回', () => {
-    const expected = 'cba'
-    const actual = reverseString('abc')
-    assert.equal(actual, expected)
+describe('String', () => {
+    it('#capitalize()', () => {
+    assert.equal(capitalize("abc"), "Abc")
+    assert.equal(capitalize("a"), "A")
   })
 })

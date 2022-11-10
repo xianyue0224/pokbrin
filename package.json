@@ -1,7 +1,7 @@
 {
-  "name": "@xyfun/utils",
-  "version": "0.0.0",
-  "description": "",
+  "name": "pokbrin",
+  "version": "1.0.0",
+  "description": "一个使用工具函数库，每个函数都有JS和TS两个版本。",
   "exports": {
     ".": {
       "import": {
@@ -36,10 +36,12 @@
     "chai": "^4.3.6",
     "mocha": "^10.0.0",
     "rimraf": "^3.0.2",
-    "ts-node": "^10.9.1"
+    "ts-node": "^10.9.1",
+    "typescript": "^4.8.4"
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/xianyue0224/utils.git"
-  }
+    "url": "https://github.com/xianyue0224/pokbrin.git"
+  },
+  "dependencies": {}
 }

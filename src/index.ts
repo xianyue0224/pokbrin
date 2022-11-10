@@ -1,5 +1,5 @@
-export { cutLast } from './handleString/cutLast'
-export { cutFirst } from './handleString/cutFirst'
-export { reverseString } from './handleString/reverseString'
-export { randomInt } from './common/randomInt'
-export { upset } from './common/upset'
+// export { randomInt } from './common/randomInt'
+// export { upset } from './common/upset'
+
+export { castArray } from "./array/castArray"
+export { capitalize } from "./string/capitalize"
