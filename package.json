@@ -1,17 +1,12 @@
 {
   "name": "pokbrin",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "一个使用工具函数库，每个函数都有JS和TS两个版本。",
   "exports": {
     ".": {
-      "import": {
-        "types": "./lib/esm/types/index.d.ts",
-        "default": "./lib/esm/index.mjs"
-      },
-      "require": {
-        "types": "./lib/cjs/types/index.d.ts",
-        "default": "./lib/cjs/index.js"
-      }
+      "types": "./lib/esm/types/index.d.ts",
+      "import": "./lib/esm/index.js",
+      "require": "./lib/cjs/index.js"
     }
   },
   "types": "./lib/cjs/types/index.d.ts",
@@ -27,7 +22,11 @@
   "files": [
     "lib/**/*"
   ],
-  "keywords": ["utils","functions","tools"],
+  "keywords": [
+    "utils",
+    "functions",
+    "tools"
+  ],
   "author": "xianyue",
   "license": "ISC",
   "devDependencies": {
